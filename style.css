@@ -45,6 +45,9 @@ h1 {
   display: flex;
   margin-top: 20px;
 }
+.hover {
+  background-color: rgba(206, 136, 171, 0.486);
+}
 .area {
   display: flex;
   justify-content: center;

@@ -1,15 +1,28 @@
 document.querySelectorAll(".item").forEach((item) => {
-  // when I start dragging
   item.addEventListener("dragStart", dragStart);
-  // when I leave the item
   item.addEventListener("dragEnd", dragEnd);
 });
-// the 'draggind' class will change the opacity
-//not working :)
+
+document.querySelectorAll(".area").forEach((area) => {
+  area.addEventListener("dragover", dragOver);
+  area.addEventListener("dragleave", dragLeave);
+  area.addEventListener("drop", drop);
+});
+
 function dragStart(e) {
   e.currentTarget.classList.add("dragging");
 }
 function dragEnd(e) {
   e.currentTarget.classList.remove("dragging");
 }
-console.log(dragStart);
+
+function dragOver(e) {
+  e.preventDefault();
+  e.currentTarget.classList.add("hover");
+}
+function dragLeave(e) {
+  e.currentTarget.classList.remove("hover");
+}
+
+// only works when dragOver is released
+function drop() {}
