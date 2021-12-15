@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 50vh;
+  background-color: rgb(252, 193, 202);
+  font-family: "Pacifico", cursive;
+}
+h1 {
+  margin: 20px 0;
+  font-size: 80px;
+  color: rgb(168, 92, 92);
+  text-shadow: 3px 3px 7px rgb(255, 255, 255);
+}
+.zone1 {
+  width: 450px;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(24, 24, 24);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(206, 136, 171);
+  font-size: 40px;
+  cursor: grab;
+}
+.item .dragging {
+  opacity: 1;
+}
+.item:hover {
+  background-color: rgb(168, 92, 92);
+}
+
+.zone2 {
+  width: 450px;
+  display: flex;
+  margin-top: 20px;
+}
+.area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+/*Reminder: when placing on zone 2, show an item shadow*/
