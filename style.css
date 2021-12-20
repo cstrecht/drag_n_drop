@@ -1,17 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 50vh;
-  background-color: rgb(252, 193, 202);
+  background-color: rgb(24, 24, 24);
   font-family: "Pacifico", cursive;
 }
 h1 {
   margin: 20px 0;
   font-size: 80px;
   color: rgb(168, 92, 92);
-  text-shadow: 3px 3px 7px rgb(255, 255, 255);
 }
 .zone1 {
   width: 450px;
@@ -20,7 +24,7 @@ h1 {
   justify-content: space-around;
   align-items: center;
   color: rgb(24, 24, 24);
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 10px;
 }
 .item {
@@ -33,20 +37,16 @@ h1 {
   font-size: 40px;
   cursor: grab;
 }
-.item .dragging {
-  opacity: 1;
+.item.dragging {
+  opacity: 0.5;
 }
-.item:hover {
-  background-color: rgb(168, 92, 92);
-}
-
 .zone2 {
   width: 450px;
   display: flex;
   margin-top: 20px;
 }
-.hover {
-  background-color: rgba(206, 136, 171, 0.486);
+.zone2.correct .area {
+  border: 2px solid #297729;
 }
 .area {
   display: flex;
@@ -54,7 +54,9 @@ h1 {
   align-items: center;
   width: 150px;
   height: 150px;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 10px;
 }
-/*Reminder: when placing on zone 2, show an item shadow*/
+.hover {
+  background-color: rgb(168, 92, 92);
+}
